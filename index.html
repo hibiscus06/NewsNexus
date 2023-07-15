@@ -5,47 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Nexus</title>
-    <link rel = "stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
 </head>
 <body>
+    
     <nav>
         <div class="main-nav container flex">
-            <a href="#" class="company-logo">
-                <img src="assests/result2.png" alt="company logo">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./assests/result2.png" alt="company logo">
             </a>
             <div class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item">Politics</li>
-                    <li class="hover-link nav-item">Politics</li>
-                    <li class="hover-link nav-item">Politics</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
                 </ul>
             </div>
-            <div class="search-bar">
-                <input type="text" class="news-input" placeholder="e.g. Science">
-                <button class="search-button">Search</button>
+            <div class="search-bar flex">
+                <input type="text" id="search-text" class="news-input" placeholder="e.g.Science">
+                <button id="search-button" class="search-button">Search</button>
             </div>
+
         </div>
     </nav>
 
     <main>
-        <div id="cards-container" class="container flex">
+        <div class="cards-container container flex" id="cards-container">
             
-    </div>
+        </div>
     </main>
     
     <template id="template-news-card">
         <div class="card">
             <div class="card-header">
-                <img src="assests/result2.png" alt="Image">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
             </div>
-            <div class = "card-content">
-                <h3 id="news-title">This is the title</h3>
-                <h6 class="news-source" id="news-source">End gadget</h6>
-                <p class="new-desc" id="news-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis animi explicabo, temporibus molestiae at natus velit quidem doloribus nesciunt asperiores officiis, quis sapiente assumenda accusantium totam, nisi autem neque.</p>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
             </div>
         </div>
     </template>
-
-    <script src = "script.js"></script>
+    <script src="script.js"></script>
+    
+      
 </body>
 </html>
